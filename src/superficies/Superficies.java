@@ -12,7 +12,7 @@ public class Superficies {
     private static Scanner sc;
 
     /**
-     * @param args the command line arguments
+     * En el main se piden los datos y se realizan las operaciones, este funciona como controlador
      */
     public static void main(String[] args) {
         String shapeType;
