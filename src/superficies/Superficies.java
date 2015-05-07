@@ -16,6 +16,7 @@ public class Superficies {
      */
     public static void main(String[] args) {
         String shapeType;
+        Modelo mod=new Modelo();
 
         sc = new Scanner(System.in);
 
@@ -25,41 +26,36 @@ public class Superficies {
 
         if (shapeType.equals("square")) {
             //add area calculations for square
-            float squareArea;
-            float sideLength;
+            
 
             System.out.println("what is the side length?");
-            sideLength = sc.nextFloat();
-            squareArea = sideLength * sideLength;
-            System.out.println("The area for your square: " + squareArea);
+            mod.setLength(sc.nextFloat()); 
+            mod.setArea(mod.getLength() * mod.getLength());
+            
 
         }
         if (shapeType.equals("rectangle")) {
             //add area calculations for rectangle here
-            float sideLength;
-            float sideHeight;
-            float rectangleArea;
+           
 
             System.out.println("what is the rectangles width?");
-            sideLength = sc.nextFloat();
+            mod.setLength(sc.nextFloat());
             System.out.println("What is the rectangles height?");
-            sideHeight = sc.nextFloat();
-            rectangleArea = sideLength * sideHeight;
-            System.out.println("The area for your rectangle is: " + rectangleArea);
+            mod.setHeight(sc.nextFloat());
+            mod.setArea(mod.getLength() * mod.getHeight()); 
+            
 
         }
         if (shapeType.equals("triangle")) {
             //add area calculations for triangle here
-            float baseLength;
-            float height;
-            float triangleArea;
+        
 
             System.out.println("What is the base length of the triangle?");
-            baseLength = sc.nextFloat();
+            mod.setLength(sc.nextFloat());
             System.out.println("What is the height of the triangle?");
-            height = sc.nextFloat();
-            triangleArea = (float) (0.5 * baseLength * height);
-            System.out.println("Your triangles area is: " + triangleArea);
+            mod.setHeight(sc.nextFloat()); 
+            mod.setArea((float) (0.5 * mod.getLength() * mod.getHeight())); 
+   
 
         }
         if (shapeType.equals("circle")) {
@@ -68,10 +64,10 @@ public class Superficies {
             float circleArea;
 
             System.out.println("What is the radius of the circle?");
-            radius = sc.nextFloat();
-            circleArea = radius * radius;
-            circleArea = (float) (3.14159265 * circleArea);
-            System.out.println("Your Circles area is " + circleArea);
+            mod.setLength(sc.nextFloat());
+            mod.setArea(mod.getLength()*mod.getLength()); 
+            mod.setArea((float) (3.14159265 * mod.getArea())); 
+            
 
         }
 
