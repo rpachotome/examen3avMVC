@@ -21,49 +21,49 @@ public class Superficies {
 
         sc = new Scanner(System.in);
 
-        System.out.println("What shape would you like to find the area of? (square, circle, triangle, rectangle):");
+        System.out.println("¿De que figura quiere calcular el area? (cuadrado, circulo, triangulo, rectangulo):");
         shapeType = sc.nextLine();
-        System.out.println("You said: " + shapeType);
+        System.out.println("Ha dicho: " + shapeType);
 
-        if (shapeType.equals("square")) {
+        if (shapeType.equals("cuadrado")) {
             //add area calculations for square
             
 
-            System.out.println("what is the side length?");
+            System.out.println("¿Cual es el tamaño del lado?");
             mod.setLength(sc.nextFloat()); 
             mod.setArea(mod.getLength() * mod.getLength());
             vis.verCuadrado(mod);
 
         }
-        if (shapeType.equals("rectangle")) {
+        if (shapeType.equals("rectangulo")) {
             //add area calculations for rectangle here
            
 
-            System.out.println("what is the rectangles width?");
+            System.out.println("¿Cual es la base del rectangulo?");
             mod.setLength(sc.nextFloat());
-            System.out.println("What is the rectangles height?");
+            System.out.println("¿Cual es la altura del rectangulo?");
             mod.setHeight(sc.nextFloat());
             mod.setArea(mod.getLength() * mod.getHeight()); 
             vis.verRectangulo(mod);
 
         }
-        if (shapeType.equals("triangle")) {
+        if (shapeType.equals("triangulo")) {
             //add area calculations for triangle here
         
 
-            System.out.println("What is the base length of the triangle?");
+            System.out.println("¿Cual es la base del triangulo?");
             mod.setLength(sc.nextFloat());
-            System.out.println("What is the height of the triangle?");
+            System.out.println("¿Cual es la altura del triangulo?");
             mod.setHeight(sc.nextFloat()); 
             mod.setArea((float) (0.5 * mod.getLength() * mod.getHeight())); 
             vis.verTriangulo(mod);
 
         }
-        if (shapeType.equals("circle")) {
+        if (shapeType.equals("circulo")) {
             //add area calculations for a circle here
         
 
-            System.out.println("What is the radius of the circle?");
+            System.out.println("¿Cual es el radio del circulo?");
             mod.setLength(sc.nextFloat());
             mod.setArea(mod.getLength()*mod.getLength()); 
             mod.setArea((float) (3.14159265 * mod.getArea())); 
