@@ -17,6 +17,7 @@ public class Superficies {
     public static void main(String[] args) {
         String shapeType;
         Modelo mod=new Modelo();
+        Vista vis=new Vista();
 
         sc = new Scanner(System.in);
 
@@ -31,7 +32,7 @@ public class Superficies {
             System.out.println("what is the side length?");
             mod.setLength(sc.nextFloat()); 
             mod.setArea(mod.getLength() * mod.getLength());
-            
+            vis.verCuadrado(mod);
 
         }
         if (shapeType.equals("rectangle")) {
@@ -43,7 +44,7 @@ public class Superficies {
             System.out.println("What is the rectangles height?");
             mod.setHeight(sc.nextFloat());
             mod.setArea(mod.getLength() * mod.getHeight()); 
-            
+            vis.verRectangulo(mod);
 
         }
         if (shapeType.equals("triangle")) {
@@ -55,19 +56,18 @@ public class Superficies {
             System.out.println("What is the height of the triangle?");
             mod.setHeight(sc.nextFloat()); 
             mod.setArea((float) (0.5 * mod.getLength() * mod.getHeight())); 
-   
+            vis.verTriangulo(mod);
 
         }
         if (shapeType.equals("circle")) {
             //add area calculations for a circle here
-            float radius;
-            float circleArea;
+        
 
             System.out.println("What is the radius of the circle?");
             mod.setLength(sc.nextFloat());
             mod.setArea(mod.getLength()*mod.getLength()); 
             mod.setArea((float) (3.14159265 * mod.getArea())); 
-            
+            vis.verCirculo(mod);
 
         }
 
